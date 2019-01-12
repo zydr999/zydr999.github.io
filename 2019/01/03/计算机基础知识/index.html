@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Linux Biolinum:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="计算机,知识,永不言败,">
+
+
+
+
+
+  <link rel="alternate" href="/auto.xml" title="永不言败的部落阁" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="计算机网络的知识与我们的生活息息相关，对于每一个开发者来说更是十分重要，深入理解它，将有助于我们在实际工作中迅速解决相关问题。本篇就计算机网络的基本知识进行概要性总结。  一、计算机网络常识 1.理解网络节点 2.理解网络交换 3.理解网络拓扑结构 4.衡量计算机网络的主要指标   二、网络参考模型OSI与TCP/IP 1.OSI七层模型 2.TCP/IP四层模型 3.总结：OSI参考模型与TCP">
+<meta name="keywords" content="计算机,知识,永不言败">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机基础知识">
+<meta property="og:url" content="http://yoursite.com/2019/01/03/计算机基础知识/index.html">
+<meta property="og:site_name" content="永不言败的部落阁">
+<meta property="og:description" content="计算机网络的知识与我们的生活息息相关，对于每一个开发者来说更是十分重要，深入理解它，将有助于我们在实际工作中迅速解决相关问题。本篇就计算机网络的基本知识进行概要性总结。  一、计算机网络常识 1.理解网络节点 2.理解网络交换 3.理解网络拓扑结构 4.衡量计算机网络的主要指标   二、网络参考模型OSI与TCP/IP 1.OSI七层模型 2.TCP/IP四层模型 3.总结：OSI参考模型与TCP">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/001.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/002.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/003.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/004.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/005.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/006.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/007.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/008.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/009.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/010.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/011.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/012.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/01.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/013.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/014.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/015.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/016.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/017.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/018.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/019.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/020.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/03/计算机基础知识/021.png">
+<meta property="og:updated_time" content="2019-01-03T03:51:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机基础知识">
+<meta name="twitter:description" content="计算机网络的知识与我们的生活息息相关，对于每一个开发者来说更是十分重要，深入理解它，将有助于我们在实际工作中迅速解决相关问题。本篇就计算机网络的基本知识进行概要性总结。  一、计算机网络常识 1.理解网络节点 2.理解网络交换 3.理解网络拓扑结构 4.衡量计算机网络的主要指标   二、网络参考模型OSI与TCP/IP 1.OSI七层模型 2.TCP/IP四层模型 3.总结：OSI参考模型与TCP">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/03/计算机基础知识/001.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":"ture","onmobile":"ture"},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/03/计算机基础知识/">
+
+
+
+
+
+  <title>计算机基础知识 | 永不言败的部落阁</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://zydr999.github.io/" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">永不言败的部落阁</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+
+
+
+
+
+
+<article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+
+
+
+<div class="post-block">
+<link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/03/计算机基础知识/">
+
+<span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+<meta itemprop="name" content="永不言败">
+<meta itemprop="description" content="">
+<meta itemprop="image" content="/images/avatar.jpeg">
+</span>
+
+<span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+<meta itemprop="name" content="永不言败的部落阁">
+</span>
+
+
+<header class="post-header">
+
+
+
+<h1 class="post-title" itemprop="name headline">计算机基础知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-03T11:02:32+08:00">
+                2019-01-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-03T11:51:21+08:00">
+                2019-01-03
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/硬件知识/" itemprop="url" rel="index">
+                    <span itemprop="name">硬件知识</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  7.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  24
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>计算机网络的知识与我们的生活息息相关，对于每一个开发者来说更是十分重要，深入理解它，将有助于我们在实际工作中迅速解决相关问题。本篇就计算机网络的基本知识进行概要性总结。</p>
+<ul>
+<li><a href="#一-计算机网络常识">一、计算机网络常识</a><ul>
+<li><a href="#1理解网络节点">1.理解网络节点</a></li>
+<li><a href="#2理解网络交换">2.理解网络交换</a></li>
+<li><a href="#3理解网络拓扑结构">3.理解网络拓扑结构</a></li>
+<li><a href="#4衡量计算机网络的主要指标">4.衡量计算机网络的主要指标</a></li>
+</ul>
+</li>
+<li><a href="#二-网络参考模型osi与tcpip">二、网络参考模型OSI与TCP/IP</a><ul>
+<li><a href="#1osi七层模型">1.OSI七层模型</a></li>
+<li><a href="#2tcpip四层模型">2.TCP/IP四层模型</a></li>
+<li><a href="#3总结osi参考模型与tcpip模型的异同">3.总结：OSI参考模型与TCP/IP模型的异同</a></li>
+</ul>
+</li>
+<li><a href="#三-理解数据封装过程">三、理解数据封装过程</a></li>
+<li><a href="#四-三次握手与四次挥手">四、三次握手与四次挥手</a><ul>
+<li><a href="#1理解三次握手">1.理解三次握手</a></li>
+<li><a href="#2四次挥手">2.四次挥手</a></li>
+<li><a href="#3三次握手-四次挥手的原因">3.三次握手、四次挥手的原因</a></li>
+</ul>
+</li>
+<li><a href="#五-ipv4地址详解">五、IPv4地址详解</a><ul>
+<li><a href="#1ip包头结构">1.IP包头结构</a></li>
+<li><a href="#2ip地址分类">2.IP地址分类</a></li>
+<li><a href="#3了解ipv6地址">3.了解IPv6地址</a></li>
+</ul>
+</li>
+<li><a href="#六-子网掩码">六、子网掩码</a><ul>
+<li><a href="#1子网掩码分类">1.子网掩码分类</a></li>
+</ul>
+</li>
+<li><a href="#七-传输层端口">七、传输层端口</a><ul>
+<li><a href="#1端口的作用">1.端口的作用</a></li>
+<li><a href="#2常见的端口号">2.常见的端口号</a></li>
+<li><a href="#3查看端口">3.查看端口</a></li>
+</ul>
+</li>
+<li><a href="#八-tcp与udp协议">八、TCP与UDP协议</a><ul>
+<li><a href="#1tcp协议transmission-control-protocol">1.TCP协议(Transmission Control Protocol)</a></li>
+<li><a href="#2udp协议">2.UDP协议</a></li>
+</ul>
+</li>
+<li><a href="#九-dns域名系统">九、DNS域名系统</a><ul>
+<li><a href="#1ip地址到主机名的映射有两种方式">1.IP地址到主机名的映射有两种方式：</a></li>
+<li><a href="#2dns服务器的原理">2.DNS服务器的原理</a></li>
+<li><a href="#3域名空间结构完全合格域名">3.域名空间结构(完全合格域名)</a></li>
+<li><a href="#4dns查询过程">4.DNS查询过程</a></li>
+</ul>
+</li>
+<li><a href="#十-网关gateway">十、网关(Gateway)</a></li>
+<li><a href="#总结">总结</a></li>
+</ul>
+<h1 id="一、计算机网络常识"><a href="#一、计算机网络常识" class="headerlink" title="一、计算机网络常识"></a><strong>一、计算机网络常识</strong></h1><p>计算机网络指将地理位置不同的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统及网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统。<br>根据不同的方式，计算机网络可以分类如下：<br><img src="/2019/01/03/计算机基础知识/./001.png" alt="enter description here"></p>
+<h2 id="1-理解网络节点"><a href="#1-理解网络节点" class="headerlink" title="1.理解网络节点"></a>1.理解网络节点</h2><p>局域网(LAN)：局域网是一种在小区域内使用的，由多台计算机组成的网络，覆盖范围通常局限在10 千米范围之内，属于一个单位或部门组建的小范围网。</p>
+<p>城域网(MAN)：城域网是作用范围在广域网与局域网之间的网络，其网络覆盖范围通常可以延伸到整个城市，借助通信光纤将多个局域网联通公用城市网络形成大型网络，使得不仅局域网内的资源可以共享，局域网之间的资源也可以共享。</p>
+<p>广域网(WAN)： 广城网是一种远程网，涉及长距离的通信，覆盖范围可以是个国家或多个国家，甚至整个世界。由于广域网地理上的距离可以超过几千千米，所以信息衰减非常严重，这种网络一般要租用专线，通过接口信息处理协议和线路连接起来，构成网状结构，解决寻径问题。</p>
+<h2 id="2-理解网络交换"><a href="#2-理解网络交换" class="headerlink" title="2.理解网络交换"></a>2.理解网络交换</h2><p>线路交换：<br>线路交换是相对于分组交换的一个概念。电路交换要求在通信前首先建立连接通道，这个连接通道用于双方通信，并且一直维持到双方通信结束。整个通信过程始终占用通道、带宽、码字等资源。<br>优点：数据传输可靠、有序；<br>缺点：带宽固定，沿着一条链路通信，网络资源利用低，初始化连接建立慢；</p>
+<p>报文交换：<br>报文交换是分组交换的前身，它的原理是：存储接收到的报文，判断其目标地址以选择路由，最后，在下一路由空闲时，将数据转发给下一路由。<br>优点：高效、灵活、迅速、可靠；<br>缺点：延时时间长且不定，通信不可靠，不适合计算机网络；</p>
+<p>分组交换：<br>分组交换是将资料组合成适当大小的区块，称为封包，再通过网络来传输。这个传送封包的网络是共享的，每个单位都可以独立把封包再传送出去，而且配置自己需要的资源。<br>优点：多路复用，网络利用率高，<br>缺点：延迟大，实时性差，设备功能复杂</p>
+<h2 id="3-理解网络拓扑结构"><a href="#3-理解网络拓扑结构" class="headerlink" title="3.理解网络拓扑结构"></a>3.理解网络拓扑结构</h2><p>计算机网络拓扑(Computer Network Topology)是指由计算机组成的网络，其中设备的分布情况以及连接状态，把它们画在图上就成了拓朴图，常见的拓扑结构如下：<br><img src="/2019/01/03/计算机基础知识/./002.jpg" alt="enter description here"></p>
+<p>总线型：<br>优点：成本低，易于扩展；<br>缺点：可靠性不高，维护困难，传输效率低；<br>总线两端需要安装终端器或者接地。不然电信号传递到总线两端，由于介质不同，电信号反方向反弹就会造成网络不稳定。<br>星型：<br>优点：易于扩展；<br>缺点：线路利用率低；<br>星型拓扑最常见的应用场景就是交换机<br>树型：<br>优点：易于扩展；方便从某一个分支节点隔离故障；<br>缺点：节点对于根的依赖太大，若根发生故障，则全网不能工作；类似于星型拓扑结构<br>环形网络：<br>优点：成本低；<br>缺点：维护困难，如果环状网络上设备较多，会造成延迟；<br>全网状和部分网状：<br>优点：可靠性高，易于扩充，组网灵活；由于存在冗余线，其中一条网络断开，还有备用网络来实现通信；<br>缺点：成本高，结构复杂，维护困难<br>注意：生活中的计算机连接方式是将上面两种或多种共同使用，这样的方式称混合式拓扑结构。</p>
+<h2 id="4-衡量计算机网络的主要指标"><a href="#4-衡量计算机网络的主要指标" class="headerlink" title="4.衡量计算机网络的主要指标"></a>4.衡量计算机网络的主要指标</h2><p><strong>速率：</strong><br>速率是指计算机网络中的主机在数字信道上，单位时间内从一端传送到另一端的数据量，即数据传输率，也称数据率或比特率。比特(bit)是数据量的最小单位，s(秒)是时间单位。速率的单位是bit/s，类似的有kb/s(k=10^3)、Mb/s(M=10^6)、Gb/s(G=10^9)、Tb/s(T=10^12)；<br>另外，字节(Byte)也是用于计量存储容量的一种计量单位，1个字节等于8个比特，即：1Byte=8bit 1B=8b 1B/s=8b/s(或1Bps=8bps)</p>
+<p><strong>带宽(bandWidth)：</strong><br>====带宽是计算机网络中的主机在数字信道上，单位时间内从一端传送到另一端的最大数据量，即最大速率。====<br>在实际上网应用中，我们接入宽带网络时，速率却相差甚远，这主要是因为ISP提供的线路带宽使用的单位是比特，而一般下载软件显示的是字节（1字节=8比特），所以要通过换算，才能得实际值。</p>
+<p>我们以1M宽带为例，按照换算公式换算一下：1Mb/s=1000Kb/s=1000/8KB/s=125KB/s。而且，网络数据传输还要受到温度和传输环境的影响，导致电信号减弱，所以真实情况下，1M宽带的真实网速度比125KB/s还要小些。</p>
+<h1 id="二、网络参考模型OSI与TCP-IP"><a href="#二、网络参考模型OSI与TCP-IP" class="headerlink" title="二、网络参考模型OSI与TCP/IP"></a><strong>二、网络参考模型OSI与TCP/IP</strong></h1><h2 id="1-OSI七层模型"><a href="#1-OSI七层模型" class="headerlink" title="1.OSI七层模型"></a>1.OSI七层模型</h2><p>开放系统互联参考模型(Open System Interconnect)，简称OSI参考模型。其目的是为异种计算机互连提供一个共同的基础和标准框架，并为保持相关标准的一致性和兼容性提供共同的参考。OSI参考模型的分层示意图如下：</p>
+<p><img src="/2019/01/03/计算机基础知识/./003.png" alt="enter description here"></p>
+<p>总结OSI参考模型的特点：<br>1.只是定义一种抽象结构，而并非具体实现的描述；<br>2.最上层应用层最接近用户，最下层物理层最接近实际的数据传递；<br>3.上三层用于为用户提供服务，下四层用于为实际数据传递提供服务；<br>下面是对于OSI七层模型的更为具体解释：<br><img src="/2019/01/03/计算机基础知识/./004.png" alt="enter description here"></p>
+<h2 id="2-TCP-IP四层模型"><a href="#2-TCP-IP四层模型" class="headerlink" title="2.TCP/IP四层模型"></a>2.TCP/IP四层模型</h2><p>OSI七层参考模型是理论上的网络通信模型，而我们在实际的互联网络中使用的是TCP/IP四层模型，它们的对应关系如下：<br><img src="/2019/01/03/计算机基础知识/./005.png" alt="enter description here"></p>
+<p>网络接口层：<br>网络接口层与OSI参考模型中的物理层和数据链路层相对应；它负责监视数据在主机和网络之间的交换。事实上，TCP/IP本身并未定义该层的协议，而由参加互联的各个网络使用自己的的物理层和数据链路层协议，然后与TCP/IP的网络接入层进行连接。地址解析协议(ARP)工作在此层，即OSI参考模型的数据链路层。</p>
+<p>网际互联层： </p>
+<ul>
+<li>网际互联层对应OSI参考模型的网络层； </li>
+<li>主要解决主机到主机的通信问题，它所包含的协议涉及数据包在整个网络上的逻辑传输。 </li>
+<li>该层有三个重要的协议：网际协议(IP)、互联网组管协议(IGMP)和互联网控制报文协议(ICMP)。</li>
+</ul>
+<p>传输层： </p>
+<ul>
+<li>传输层对应OSI参考模型的传输层； </li>
+<li>为应用层实体提供端对端的通信功能更，保证了数据包的顺序传送及数据的完整性。 </li>
+<li>该层定义了两个主要的协议：传输控制协议(TCP)和用户数据包协议(UDP)。</li>
+</ul>
+<p>应用层：<br>应用层对应OSI参考模型的应用层；为用户提供所需要的各种服务，例如：FTP、Telent、DNS、SMTP等。</p>
+<h2 id="3-总结：OSI参考模型与TCP-IP模型的异同"><a href="#3-总结：OSI参考模型与TCP-IP模型的异同" class="headerlink" title="3.总结：OSI参考模型与TCP/IP模型的异同"></a>3.总结：OSI参考模型与TCP/IP模型的异同</h2><p>相同点：<br>1.OSI参考模型和TCP/IP参考模型都采用了层次结构概念；<br>2.都能够提供面向连接和无连接的的两种通信服务机制；<br>不同点：<br>1.可靠性要求不同，后者更高；<br>2.OSI模型是在协议开发之前设计的，具有通用性；TCP/IP协议是先有协议后建立的模型，不适用于非TCP/IP网络；</p>
+<h1 id="三、理解数据封装过程"><a href="#三、理解数据封装过程" class="headerlink" title="三、理解数据封装过程"></a><strong>三、理解数据封装过程</strong></h1><p>网络参考模型清晰的描述了网络中数据的传输过程，其中的每层都负责与其他机器的对等层进行通信，这也涉及到了数据的封装问题。现在，我们可以通过一个实例来具体分析数据封装的过程：</p>
+<p><img src="/2019/01/03/计算机基础知识/./006.png" alt="enter description here"></p>
+<p>FTP服务器向员工主机发送数据分为两个阶段：FTP服务器发送数据、员工主机接收数据<br>FTP服务器发送数据：<br>1.应用层将数据(目标文件)传递给传输层，传输层为其添加TCP头部和端口信息，此时数据单元被称为段；<br>2.传输层将数据段传递给网络层，网络层再次封装添加IP头部，此时数据单元被称为包；<br>3.数据链路层接收网络层包，继续封装为其添加Mac头部和尾部，此时数据单元被称为帧；<br>4.物理层将接收到的数据转化为比特流，在网络中传送；</p>
+<p>员工主机接收数据：<br>员工主机接收数据的过程与FTP服务器发送数据过程相反，刚好是逐层的解封装操作，最终在其应用层，用户可以得到目标文件数据；</p>
+<h1 id="四、三次握手与四次挥手"><a href="#四、三次握手与四次挥手" class="headerlink" title="四、三次握手与四次挥手"></a><strong>四、三次握手与四次挥手</strong></h1><p>在TCP/IP协议中，TCP协议用于提供可靠的连接服务，这其中涉及到了三次握手与四次挥手过程，现在对它们进行具体的分析。</p>
+<h2 id="1-理解三次握手"><a href="#1-理解三次握手" class="headerlink" title="1.理解三次握手"></a>1.理解三次握手</h2><p>三次握手是为了建立一个可靠的连接，此过程可参考下图：</p>
+<p><img src="/2019/01/03/计算机基础知识/./007.png" alt="enter description here"></p>
+<p>第一次握手：<br>建立连接时，客户端发送SYN包（syn=x）到服务器，并进入SYN_SENT状态，等待服务器确认；<br>SYN：同步序列编号（Synchronize Sequence Numbers）。</p>
+<p>第二次握手：<br>服务器收到SYN包，必须确认客户的SYN(ACK=x+1）,同时自己也发送一个SYN包（syn=y）,即SYN+ACK包,此时服务器进入SYN_RECV状态；<br>ACK：确认字符(Acknowledgement)，在数据通信中，接收站发给发送站的一种传输类控制字符。表示发来的数据已确认接收无误。</p>
+<p>第三次握手：客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK(ack=y+1），此包发送完毕，客户端和服务器进入ESTABLISHED（TCP连接成功）状态。</p>
+<p>完成三次握手后，客户端与服务器开始传送数据。</p>
+<h2 id="2-四次挥手"><a href="#2-四次挥手" class="headerlink" title="2.四次挥手"></a>2.四次挥手</h2><p>四次挥手用于终止TCP连接，断开一个TCP连接需要客户端和服务端总共发送4个包，以确认连接的断开。此过程可参考下图：</p>
+<p><img src="/2019/01/03/计算机基础知识/./008.png" alt="enter description here"></p>
+<p>“由于TCP连接是全双工的，因此每个方向都必须单独进行关闭。这原则是当一方完成它的数据发送任务后就能发送一个FIN来终止这个方向的连接。收到一个 FIN只意味着这一方向上没有数据流动，一个TCP连接在收到一个FIN后仍能发送数据。首先进行关闭的一方将执行主动关闭，而另一方执行被动关闭。” ——摘自百度</p>
+<p>第一次挥手：<br>客户端发送一个FIN，用来关闭客户到服务器的数据传送，并进入FIN_WAIT_1状态。</p>
+<p>第二次挥手：<br>服务器收到客服端的FIN，发回一个ACK，确认序号为收到的序号加1。和SYN一样，一个FIN将占用一个序号。<br>服务器段进入CLOSE_WAIT状态。</p>
+<p>第三次挥手：<br>服务器发送一个FIN，用来关闭服务器到客户端的数据传递，服务器端进入LAST_ACK状态。</p>
+<p>第四次挥手：<br>客户端收到服务器的FIN后，进入进入TIME_WAIT状态；<br>客户端发送一个ACK给服务器，确认序号为收到序号+1，Server进入CLOSED状态，完成四次挥手。</p>
+<p>特别注意：上述是客户端主动关闭，服务器端被动关闭的情况，实际中还可能出现双方同时发起关闭的情况，具体的流程可参考下图：</p>
+<p><img src="/2019/01/03/计算机基础知识/./009.png" alt="enter description here"></p>
+<h2 id="3-三次握手、四次挥手的原因"><a href="#3-三次握手、四次挥手的原因" class="headerlink" title="3.三次握手、四次挥手的原因"></a>3.三次握手、四次挥手的原因</h2><p>为什么建立连接协议是三次握手，而关闭连接却是四次挥手呢？<br>对于建立连接的过程，服务器端在接收到客户端SYN请求报文后，可以把ACK和SYN(ACK起应答用，而SYN起同步作用)在一个报文里来发送。</p>
+<p>而对于关闭连接的过程，当服务器端收到客户端的FIN报文时，它仅仅表示客户端不再发送数据了，但未必服务器端所有的数据全部发送给客户端了。所以，此时的服务器端可以立即关闭，也可以继续发送一些数据给客户端之后，再发送FIN报文给客户端，来表示同意关闭连接。因此断开连接，服务器端的ACK报文和FIN报文多数情况下都是分开发送的。</p>
+<h1 id="五、IPv4地址详解"><a href="#五、IPv4地址详解" class="headerlink" title="五、IPv4地址详解"></a><strong>五、IPv4地址详解</strong></h1><p>IP地址为互联网上的每一个网络和每一台主机分配一个逻辑地址，用于实现通信。我们目前正在大量使用的是IPv4(IP协议的第四版)。</p>
+<h2 id="1-IP包头结构"><a href="#1-IP包头结构" class="headerlink" title="1.IP包头结构"></a>1.IP包头结构</h2><p>在讲到数据封装过程时，我们看到网络层添加了IP包头，其详细结构如下：<br>注：字段后面括号里的数字是指该字段在IP数据包头信息中所占的位(bit)数；</p>
+<p><img src="/2019/01/03/计算机基础知识/./010.png" alt="enter description here"></p>
+<p>上述是IP包头的结构，我们会看到IP包头中有待选加入的字段，所以IP包头不一定就是20个字节，IPV4在解包检测时需要判断包头的长度，比较浪费时间，这也是它比IPV6慢的原因。</p>
+<h2 id="2-IP地址分类"><a href="#2-IP地址分类" class="headerlink" title="2.IP地址分类"></a>2.IP地址分类</h2><p>最初设计互联网络时，为了便于寻址及层次化构造网络，每个IP地址包括两个标识码ID，即网络ID和主机ID。同一个物理网络上的所有主机都使用同一个网络ID，网络上的一个主机(包括网络上工作站，服务器和路由器等)有一个主机ID与其对应。<br>IP地址根据网络ID的不同分为5种类型，A类地址、B类地址、C类地址、D类地址和E类地址，其中D和E为特殊地址，不对用户开放使用，分类的具体情况如下：</p>
+<p><img src="/2019/01/03/计算机基础知识/./011.png" alt="enter description here"></p>
+<p>我们真正用到的是A、B、C类IP地址，关于它们的详细信息如下：</p>
+<p><img src="/2019/01/03/计算机基础知识/./012.png" alt="enter description here"></p>
+<p>A类地址：<br>1.前8位(一个字节)为网络ID，剩下24位(三个字节)为主机ID；<br>2.网络地址的最高位必须是0<br>3.A类地址数量少，有126个网络，每个网络可容纳主机：256的3次方-2=16777214台。</p>
+<p>B类地址：<br>1.前16位为网络ID，剩下16位为主机ID；<br>2.网络地址的最高位必须是10<br>3.B类地址有16384个网络，每个网络可容纳主机：256的2次方-2=65534台。</p>
+<p>C类地址：<br>1.前24位为网络ID，剩下8位为主机ID；<br>2.网络地址的最高位必须是110<br>3.B类地址有209万余个网络，每个网络可容纳主机：256-2=254台。</p>
+<h2 id="3-了解IPv6地址"><a href="#3-了解IPv6地址" class="headerlink" title="3.了解IPv6地址"></a>3.了解IPv6地址</h2><p>IPv6是下一版本的互联网协议，它的提出最早是为了解决IPv4地址空间被耗尽的问题；与IPv4相比，IPv6主要有以下的优势： </p>
+<ul>
+<li>扩大了地址空间，IPv6采用128位(16个字节)地址长度；按保守方法估算IPv6实际可分配的地址，整个地球的每平方米面积上仍可分配1000多个地址； </li>
+<li>提高了网络的整体吞吐量； </li>
+<li>改善整个服务质量(Qos)； </li>
+<li>提高安全性； </li>
+<li>支持即插即用和移动性；</li>
+</ul>
+<h1 id="六、子网掩码"><a href="#六、子网掩码" class="headerlink" title="六、子网掩码"></a><strong>六、子网掩码</strong></h1><p>IP地址在设计时就考虑到地址分配的层次特点，将每个IP地址都分割成网络号和主机号两部分，以便于IP地址的寻址操作。但IP地址的网络号和主机号各是多少位呢？如果不指定，就不知道哪些位是网络号、哪些是主机号，这就需要通过子网掩码来实现。</p>
+<p>将子网掩码作为一个32位地址，和IP地址结合使用，我们可以屏蔽IP地址的一部分以区别网络号和主机号，并说明该IP地址是在局域网上，还是在远程网上；也可以将一个大的IP网络划分为若干小的子网络；</p>
+<p>对于A类地址来说，默认的子网掩码是255.0.0.0；对于B类地址来说默认的子网掩码是255.255.0.0；对于C类地址来说默认的子网掩码是255.255.255.0。</p>
+<h2 id="1-子网掩码分类"><a href="#1-子网掩码分类" class="headerlink" title="1.子网掩码分类"></a>1.子网掩码分类</h2><p>子网掩码一共分为两类。一类是缺省子网掩码，一类是自定义子网掩码。缺省子网掩码即未划分子网，对应的网络号的位都置1，主机号都置0。<br>A类网络缺省子网掩码：255.0.0.0<br>B类网络缺省子网掩码：255.255.0.0<br>C类网络缺省子网掩码：255.255.255.0<br>自定义子网掩码是将一个网络划分为几个子网，需要每一段使用不同的网络号或子网号，实际上我们可以认为是将主机号分为两个部分：子网号、子网主机号。形式如下：<br>未做子网划分的ip地址：网络号 + 主机号<br>做子网划分后的ip地址：网络号 + 子网号 + 子网主机号</p>
+<p>下面演示了子网掩码具体用法：一个B类的IP地址，为其配置一个C类标准子网掩码，可实现划分子网，操作效果如下：</p>
+<p><img src="/2019/01/03/计算机基础知识/./01.png" alt="enter description here"></p>
+<p><strong>总结:</strong></p>
+<p>将IP地址与子网掩码做与运算得到当前网络地址；<br>将IP地址中与子网掩码相对应的为0的部分全部换成1就得到当前网络的广播地址；</p>
+<h1 id="七、传输层端口"><a href="#七、传输层端口" class="headerlink" title="七、传输层端口"></a><strong>七、传输层端口</strong></h1><h2 id="1-端口的作用"><a href="#1-端口的作用" class="headerlink" title="1.端口的作用"></a>1.端口的作用</h2><p>我们已经知道，一台拥有IP地址的主机可以提供许多服务，比如Web服务、FTP服务、SMTP服务等，这些服务完全可以通过1个IP地址来实现。但是，主机是怎样区分不同的网络服务呢？显然不能只靠IP地址，因为IP地址与网络服务的关系是一对多的关系。这实际上是通过“IP地址+端口号”来区分不同的服务的。</p>
+<p>这里的端口，并非指物理意义上的端口，而是特指TCP/IP协议中的端口，是逻辑意义上的端口。端口应用于网络参考模型中的传输层，端口号标识了计算机应用层中的各个进程，从而区分不同的服务。</p>
+<h2 id="2-常见的端口号"><a href="#2-常见的端口号" class="headerlink" title="2.常见的端口号"></a>2.常见的端口号</h2><p>端口号是16位的，所以最多有2的16次方个端口，常见的端口号有以下几个：<br><img src="/2019/01/03/计算机基础知识/./013.png" alt="enter description here"></p>
+<h2 id="3-查看端口"><a href="#3-查看端口" class="headerlink" title="3.查看端口"></a>3.查看端口</h2><p>打开计算机终端界面，输入netstat命令可以查看端口信息：<br>netstat -an<br>-a : 查看所有连接和监听端口<br>-n: 显示IP地址和端口号，而不显示域名和服务名</p>
+<h1 id="八、TCP与UDP协议"><a href="#八、TCP与UDP协议" class="headerlink" title="八、TCP与UDP协议"></a><strong>八、TCP与UDP协议</strong></h1><p>传输层有两个重要的传输协议，它们分别是传输控制协议TCP，用户数据包协议UDP；</p>
+<h2 id="1-TCP协议-Transmission-Control-Protocol"><a href="#1-TCP协议-Transmission-Control-Protocol" class="headerlink" title="1.TCP协议(Transmission Control Protocol)"></a>1.TCP协议(Transmission Control Protocol)</h2><p>TCP是一种面向连接的、可靠的、基于字节流的传输层通信协议；TCP包头的结构如下图：</p>
+<p><img src="/2019/01/03/计算机基础知识/./014.png" alt="enter description here"></p>
+<p>TCP协议的特点： </p>
+<ul>
+<li>TCP是面向连接的可靠的传输控制协议，建立连接需要三次握手，释放连接需要进行四次挥手。保证连接的建立，数据的同步传输。 </li>
+<li>面向字节流，会把从上层传输下来的数据当作是无结构的字节流。 </li>
+<li>只能一对一的通信。 </li>
+<li>TCP在IP协议的基础之上添加了序号机制，确认机制，超时重传机制，数据校验，从而保证传输的可靠性，同时保证不出现丢失或者是乱序。</li>
+</ul>
+<h2 id="2-UDP协议"><a href="#2-UDP协议" class="headerlink" title="2.UDP协议"></a>2.UDP协议</h2><p>UDP是一种无连接的传输层协议，提供面向事务的简单不可靠信息传送服务。UDP包头的结构如下图：</p>
+<p><img src="/2019/01/03/计算机基础知识/./015.png" alt="enter description here"></p>
+<p>UDP协议的特点： </p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">* UDP是面向无连接的数据包服务，一方向另一方发送数据不需要建立连接。相当于发短信，别人是否收到，短信信息是否丢失都不能知道。 </span></span><br><span class="line"><span class="comment">* 面向报文，从上层接收的数据如果报文不大于传输限制，则直接加上首部传输，如果报文过大，则进行IP分片后，再分别加入首部进行传输。 </span></span><br><span class="line"><span class="comment">* UDP协议可以一对一通信，也可以一对多通信。 </span></span><br><span class="line"><span class="comment">* UDP仅仅是尽最大的努力进行交付，只是做比较初级的检查，比如端头检查，差错检测，往往在传输过程中会出现分组丢失、乱序、重复传输等问题。</span></span><br></pre></td></tr></table></figure>
+<h1 id="九、DNS域名系统"><a href="#九、DNS域名系统" class="headerlink" title="九、DNS域名系统"></a><strong>九、DNS域名系统</strong></h1><p>互联网需要通过IP地址来进行通信，但是IP地址记忆困难，所以使用英文字符组合的域名来代替。比如：为了进入百度首页，我们可以在浏览器中输入IP地址:119.75.217.109，也可以直接输入域名:htpts://<a href="http://www.baidu.com；显然第二种方式更加方便和记忆。" target="_blank" rel="noopener">www.baidu.com；显然第二种方式更加方便和记忆。</a></p>
+<p>但是，这需要我们建立域名与IP地址的相互映射关系，DNS(Domain Name System，域名系统)正是为了解决这一问题而存在。</p>
+<h2 id="1-IP地址到主机名的映射有两种方式："><a href="#1-IP地址到主机名的映射有两种方式：" class="headerlink" title="1.IP地址到主机名的映射有两种方式："></a>1.IP地址到主机名的映射有两种方式：</h2><p>静态映射<br>其实，每台设备上都配置了域名到IP地址的映射，各设备独立维护自己的映射表，而且只供本设备使用；比如在windows电脑中，打开”window\system32\drivers\etc”路径下的hosts文件，其中就存在域名与IP地址的对应关系。</p>
+<p>动态映射<br>建立一套域名解析系统，只在专门的DNS服务器上配置域名到IP地址的映射；网络上需要使用域名通信的设备，首先需要到DNS服务器查询域名所对应的IP地址。</p>
+<p>本机静态映射文件的优先级高于DNS域名解析服务器；在访问网站的时，设备会首先在本机静态映射文件里查找对应关系，如果找不到才会使用DNS。但是静态映射不能包含大量的IP映射，而且域名维护也十分困难，所以只作为普通调试使用。</p>
+<h2 id="2-DNS服务器的原理"><a href="#2-DNS服务器的原理" class="headerlink" title="2.DNS服务器的原理"></a>2.DNS服务器的原理</h2><p>下图展示了客户机通过域名，访问远程Web服务器的流程，具体的步骤如下：</p>
+<p><img src="/2019/01/03/计算机基础知识/./016.png" alt="enter description here"></p>
+<p>1客户机向DNS服务器发送域名查询请求；<br>2.DNS服务器告知客户机Web服务器的IP地址；<br>3.客户机使用DNS返回的IP地址，与Web服务器通信；</p>
+<h2 id="3-域名空间结构-完全合格域名"><a href="#3-域名空间结构-完全合格域名" class="headerlink" title="3.域名空间结构(完全合格域名)"></a>3.域名空间结构(完全合格域名)</h2><p>通常 Internet 主机域名的一般结构为：主机名.三级域名.二级域名.顶级域名，如下图：</p>
+<p><img src="/2019/01/03/计算机基础知识/./017.png" alt="enter description here"></p>
+<p>顶级域名：由Internet网络协会进行登记和管理，它还为Internet的每一台主机分配唯一IP地址；顶级域分为组织域、国家地区域。<br><img src="/2019/01/03/计算机基础知识/./018.png" alt="enter description here"></p>
+<p>二级域名：个人或者企业向域名分配组织申请得到<br>主机域名：常见的是www用于代表网页服务；<br>注意：”顶级域名.二级域名.三级域名”，三者通过“.”连接在一起后在全球唯一;</p>
+<h2 id="4-DNS查询过程"><a href="#4-DNS查询过程" class="headerlink" title="4.DNS查询过程"></a>4.DNS查询过程</h2><p><img src="/2019/01/03/计算机基础知识/./019.png" alt="enter description here"></p>
+<p>递归查询：<br>客户机向NDS服务器的查询是递归查询，即当客户机向DNS服务器发出请求后，若DNS服务器本身不能解析，则会向另外的DNS服务器发出请求，得到结果后转发给客户机；</p>
+<p>迭代查询：<br>DNS服务器收到一次迭代查询结果回复一次结果，这个结果不一定是目标IP与域名的映射关系，也可以是其他DNS服务器的地址；</p>
+<h1 id="十、网关-Gateway"><a href="#十、网关-Gateway" class="headerlink" title="十、网关(Gateway)"></a><strong>十、网关(Gateway)</strong></h1><p>“网关，又称网间连接器、协议转换器。网关在网络层以上实现网络互联，是最复杂的网络连接设备，仅用于两个高层协议不同的网络互联。网关既可以用于广域网互联，也可以用于局域网互联。” ——摘自百度</p>
+<p>通俗的讲，网关其实就是一种充当转换重任的服务器或者路由器，通过下面的图会更加方便的理解：</p>
+<p><img src="/2019/01/03/计算机基础知识/./020.png" alt="enter description here"></p>
+<p>图中显示了我们在生活中常见的两种网络设备：交换机和路由器，总结它们的功能如下：<br>交换机：<br>1.使用交换机时，网线连接在交换机的端口上，交换机会自动记录了各个主机的MAC地址；<br>2.交换机识别MAC地址，但不识别IP，因为它在数据链路层，而不是网络层；<br>2.交换机只负责同一网段的通信；</p>
+<p><strong>网关：</strong><br>1.网关是计算机硬件设备，一般是路由器，负责在不同的网段通信，也可以在服务器上模拟路由功能；<br>2.网关负责连接不同网段的局域网，在所有内网计算机访问的不是本网段的数据时使用；<br>3.网关负责将内网IP转化为公网Ip，或者将公网IP转化为内网IP;</p>
+<p>下面是在Windows系统计算机上的一个网关配置示例：</p>
+<p><img src="/2019/01/03/计算机基础知识/./021.png" alt="enter description here"></p>
+<p>分析：如果不配置网关与DNS，当前计算机只能在局域网内通信，而不能连接互联网;<br>网关：网关负责将内网IP转化为公网Ip，或者将公网IP转化为内网IP;<br>DNS：将域名翻译为真正的IP地址；</p>
+<p>**</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>**<br>本文只是概括性的总结了计算机网络的基本知识，为了更深层次的学习，仍需要再不断的学习和探索，继续加油！ ———————</p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+    
+    <div>
+
+<div style="text-align:center;color: #A9A9A9;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+
+</div>
+
+    
+    </div>
+
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/计算机-知识-永不言败/" rel="tag"><i class="fa fa-tag"></i> 计算机,知识,永不言败</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/02/在Hexo上发布文章/" rel="next" title="在Hexo上发布文章">
+                <i class="fa fa-chevron-left"></i> 在Hexo上发布文章
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="永不言败">
+            
+              <p class="site-author-name" itemprop="name">永不言败</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/auto.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zydr999.github.io" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:my1030211@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、计算机网络常识"><span class="nav-number">1.</span> <span class="nav-text">一、计算机网络常识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-理解网络节点"><span class="nav-number">1.1.</span> <span class="nav-text">1.理解网络节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-理解网络交换"><span class="nav-number">1.2.</span> <span class="nav-text">2.理解网络交换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-理解网络拓扑结构"><span class="nav-number">1.3.</span> <span class="nav-text">3.理解网络拓扑结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-衡量计算机网络的主要指标"><span class="nav-number">1.4.</span> <span class="nav-text">4.衡量计算机网络的主要指标</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、网络参考模型OSI与TCP-IP"><span class="nav-number">2.</span> <span class="nav-text">二、网络参考模型OSI与TCP/IP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-OSI七层模型"><span class="nav-number">2.1.</span> <span class="nav-text">1.OSI七层模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-TCP-IP四层模型"><span class="nav-number">2.2.</span> <span class="nav-text">2.TCP/IP四层模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-总结：OSI参考模型与TCP-IP模型的异同"><span class="nav-number">2.3.</span> <span class="nav-text">3.总结：OSI参考模型与TCP/IP模型的异同</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、理解数据封装过程"><span class="nav-number">3.</span> <span class="nav-text">三、理解数据封装过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、三次握手与四次挥手"><span class="nav-number">4.</span> <span class="nav-text">四、三次握手与四次挥手</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-理解三次握手"><span class="nav-number">4.1.</span> <span class="nav-text">1.理解三次握手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-四次挥手"><span class="nav-number">4.2.</span> <span class="nav-text">2.四次挥手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-三次握手、四次挥手的原因"><span class="nav-number">4.3.</span> <span class="nav-text">3.三次握手、四次挥手的原因</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、IPv4地址详解"><span class="nav-number">5.</span> <span class="nav-text">五、IPv4地址详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-IP包头结构"><span class="nav-number">5.1.</span> <span class="nav-text">1.IP包头结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-IP地址分类"><span class="nav-number">5.2.</span> <span class="nav-text">2.IP地址分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-了解IPv6地址"><span class="nav-number">5.3.</span> <span class="nav-text">3.了解IPv6地址</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、子网掩码"><span class="nav-number">6.</span> <span class="nav-text">六、子网掩码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-子网掩码分类"><span class="nav-number">6.1.</span> <span class="nav-text">1.子网掩码分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、传输层端口"><span class="nav-number">7.</span> <span class="nav-text">七、传输层端口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-端口的作用"><span class="nav-number">7.1.</span> <span class="nav-text">1.端口的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-常见的端口号"><span class="nav-number">7.2.</span> <span class="nav-text">2.常见的端口号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-查看端口"><span class="nav-number">7.3.</span> <span class="nav-text">3.查看端口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八、TCP与UDP协议"><span class="nav-number">8.</span> <span class="nav-text">八、TCP与UDP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-TCP协议-Transmission-Control-Protocol"><span class="nav-number">8.1.</span> <span class="nav-text">1.TCP协议(Transmission Control Protocol)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-UDP协议"><span class="nav-number">8.2.</span> <span class="nav-text">2.UDP协议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九、DNS域名系统"><span class="nav-number">9.</span> <span class="nav-text">九、DNS域名系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-IP地址到主机名的映射有两种方式："><span class="nav-number">9.1.</span> <span class="nav-text">1.IP地址到主机名的映射有两种方式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-DNS服务器的原理"><span class="nav-number">9.2.</span> <span class="nav-text">2.DNS服务器的原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-域名空间结构-完全合格域名"><span class="nav-number">9.3.</span> <span class="nav-text">3.域名空间结构(完全合格域名)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-DNS查询过程"><span class="nav-number">9.4.</span> <span class="nav-text">4.DNS查询过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十、网关-Gateway"><span class="nav-number">10.</span> <span class="nav-text">十、网关(Gateway)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">11.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+<!-- 在网页底部添加网站运行时间 -->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+var now = new Date();
+function createtime() {
+var grt= new Date("09/27/2017 00:00:00");//此处修改你的建站时间或者网站上线时间
+now.setTime(now.getTime()+250);
+days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+document.getElementById("timeDate").innerHTML = "部落阁运行 "+dnum+" 天 ";
+document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 ";
+}
+setInterval("createtime()",250);
+</script>
+
+<!-- 新增访客统计代码 -->
+
+<div class="busuanzi-count">
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span class="site-uv">
+<i class="fa fa-user"></i>
+访问用户： <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人
+</span>
+<div class="powered-by"></div>
+<span class="site-uv">
+<i class="fa fa-eye"></i>
+访问次数： <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次
+</span>
+
+
+
+&copy; <span itemprop="copyrightYear">2019</span>
+<div class="theme-info">
+<div class="powered-by"></div>
+<span class="post-count">全站共9.1k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </div></div></footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
